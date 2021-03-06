@@ -1,3 +1,12 @@
+# Editing
+
+I used *this page*: [basic-syntax](https://www.markdownguide.org/basic-syntax/#links)
+I used **this command**:
+
+```bash
+nano README.md
+``
+
 # Train Speed Controller
 
 This is a sample application for the verification laboratory.
