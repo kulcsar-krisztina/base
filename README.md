@@ -1,6 +1,7 @@
 # Editing
 
 I used *this page*: [basic-syntax](https://www.markdownguide.org/basic-syntax/#links)
+
 I used **this command**:
 
 ```bash
