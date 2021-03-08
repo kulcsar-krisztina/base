@@ -8,12 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class TachographTest {
 
-    Tachograph t;
-
-    @BeforeAll
-    public void beforeAll() {
-        t = new Tachograph();
-    }
+    Tachograph t = new Tachograph();
 
     @Test
     public void add() {
@@ -21,4 +16,7 @@ class TachographTest {
         Assertions.assertEquals(1, t.getSize());
     }
 }
+
+
+
 
