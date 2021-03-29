@@ -33,19 +33,27 @@ public class TrainSensorTest {
     @Test
     public void Test2() {
         when(controller.getReferenceSpeed()).thenReturn(5);
+        test.overrideSpeedLimit(-1);
+        Assert.assertTrue(test.getAlarmState());
+    }
+
+
+    @Test
+    public void Test3() {
+        when(controller.getReferenceSpeed()).thenReturn(5);
         test.overrideSpeedLimit(100);
         Assert.assertFalse(test.getAlarmState());
     }
 
     @Test
-    public void Test3() {
+    public void Test4() {
         when(controller.getReferenceSpeed()).thenReturn(150);
         test.overrideSpeedLimit(50);
         Assert.assertTrue(test.getAlarmState());
     }
 
     @Test
-    public void Test4() {
+    public void Test5() {
         when(controller.getReferenceSpeed()).thenReturn(150);
         test.overrideSpeedLimit(80);
         Assert.assertFalse(test.getAlarmState());
