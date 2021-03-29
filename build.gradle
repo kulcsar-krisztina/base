@@ -1,7 +1,20 @@
-subprojects {
-  apply plugin: 'java'
+plugins {
+    id "org.sonarqube" version "2.6.2" apply false
+}
 
-  repositories {
-    jcenter()
-  }
+subprojects { subproject ->
+    apply plugin: 'java'
+    apply plugin: 'org.sonarqube'
+
+    sonarqube {
+        properties {
+            property "sonar.host.url", "http://localhost:9000"
+            property "sonar.login", "admin"
+            property "sonar.password", "alma1234"
+        }
+    }
+
+    repositories {
+        jcenter()
+    }
 }
